@@ -12,7 +12,8 @@ defmodule CCCEDICT do
     #      trad       simp         read      glosses
   def line_to_entry(line_str) do
     [_, t, s, r, g] = Regex.run entry_line_re, line_str
-    %Entry{trad: t, simp: s, read: r, glosses: g}
+    glosses = String.split g, "/"
+    %Entry{trad: t, simp: s, read: r, glosses: glosses}
   end
 
   def entries_stream do
