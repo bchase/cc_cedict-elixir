@@ -1,9 +1,9 @@
 defmodule CCCEDICT do
   defmodule Entry do
     defstruct num: nil,
-      trad:    [],
-      simp:    [],
-      read:    [],
+      trad:    "",
+      simp:    "",
+      read:    "",
       glosses: []
   end
 
